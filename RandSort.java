@@ -5,21 +5,28 @@ public class Main {
 	static int[] array = {1, 4, 8, 5, 3, 5, 7, 9, 2, 6, 0, 7, 1, 6, 4, 2, 7, 3, 7};
 	
 	public static void main(String args[]) {
-	    try {
-	        while(!(isSorted(array))) {
-	            sort(array);
-	            printArray(array);
-	        }
-	    }
-	   catch(ArrayIndexOutOfBoundsException e) {
+	   int perms = 0;
+	   
+	   while(!(isSorted(array))) {
+	       sort(array);
+	       printArray(array);
+	       perms += 1;
+	       System.out.print("Permutation: " + perms + "  ");
 	   }
-	    
-	}
+	   
+	   	System.out.print("Sorted Array: ");
+	    printArray(array);
+    }
 	
 	static boolean isSorted(int[] a) {
 	    for(int i = 0; i < a.length; i++) {
-	        if(a[i]>a[i+1]) {
-	            return false;
+	        try {
+	            if(a[i]>a[i+1]) {
+	                return false;
+	            }
+	        }
+	        catch(ArrayIndexOutOfBoundsException e) {
+	            
 	        }
 	    }
 	    return true;
