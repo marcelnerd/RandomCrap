@@ -12,7 +12,6 @@ public class Main {
 	        }
 	    }
 	   catch(ArrayIndexOutOfBoundsException e) {
-	            
 	   }
 	    
 	}
@@ -39,10 +38,6 @@ public class Main {
 	    tmp = a[l];
 	    a[l] = a[b];
 	    a[b] = tmp;
-	}
-	
-	static int getRandomNumber(int size) {
-	    return 0;
 	}
 	
 	static void printArray(int[] a) {
