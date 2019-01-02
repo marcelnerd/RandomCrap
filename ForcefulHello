@@ -1,0 +1,19 @@
+public class ForcefullHello {
+
+	public static void main(String[] args) {
+			String target = "Hello World!";
+			String current = "";
+			int location = 0;
+			while(location < target.length()-1) {
+				for(int i = 30; i < 143; i++) {
+					location = current.length();
+					if(((char) i) == (target.charAt(location))) {
+						current += target.charAt(location);
+					}
+					System.out.println(current + ((char) i));
+				}
+				System.out.println(current);
+			}
+	}
+
+}
